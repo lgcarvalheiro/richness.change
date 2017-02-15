@@ -9,6 +9,7 @@
  ###  Date: 1 September 2013
  ###  People who contributed for the code are acknowledge throughout the script 
  ###  Note: after using this code, to check if bias due to differences in sampling effort were indeed corrected,
+ ###  generate corrected files if necessary,
  ###  and/or to extract average trends
  ###  please use Trend.extractor script
 ###########################################################################################
