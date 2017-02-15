@@ -5,11 +5,11 @@
 ############################################################################################### 
  ###  this script includes functions that allow to calculate relative changes in species richness through time for specific geographical locations
  ###  based on list of records of species presences
- ###  Responsible: Luísa G. Carvalheiro (Naturalis Biodiversity Center/Univeristy of Brasília), lgcarvalheiro@gmail.com
+ ###  Responsible: LuÃ­sa G. Carvalheiro (Naturalis Biodiversity Center/Univeristy of BrasÃ­lia), lgcarvalheiro@gmail.com
  ###  Date: 1 September 2013
  ###  People who contributed for the code are acknowledge throughout the script 
  ###  Note: after using this code, to check if bias due to differences in sampling effort were indeed corrected,
- ###  to correct standard deviation estimations and/or to extract average trends
+ ###  and/or to extract average trends
  ###  please use Trend.extractor script
 ###########################################################################################
  
@@ -289,7 +289,7 @@ return (list(fvals=f1_to_fn,fnames=findex,Sobs=Sobs,f0=f0est,fratio=f0f1ratio,ex
 rarefy.1.unit <- function (unit.data, effort){
 # ------------------------------------------------------------------------------
 # script written by Petr Keil and editted by Luisa Carvalheiro with suggestions from Tom van Dooren
-# Description: function similar to Petr Keil´s rarefy.1.unit but it uses the implementation
+# Description: function similar to Petr KeilÂ´s rarefy.1.unit but it uses the implementation
 #              of rarefaction from the vegan package (Hecks fromulas) ; 
 #              as well as rarefied richness and SD based on Colwell and Mao work
 # Arguments: unit.data - vector containing the species names (from database);
