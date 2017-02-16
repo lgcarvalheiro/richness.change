@@ -27,16 +27,27 @@ Viechtbauer, W. (2010). Conducting meta-analyses in R with the metafor package. 
 
 # 3.   Run MultilevelRAR function
 multilevel.RAR.buster (multi.RAR.data=Data, #inform name of original dataset
+	
 	taxon.indx=7,   # column nb with info on species name
+	
 	trait.indx=16,  # column nb that has info on traits, if no trait analyses will be done the column should cointain the same value throughout
+	
 	year.indx=3,    # column nb with info on year
+	
 	scale.data.indcs=c(1,12), # columns with information on cell ID. If analyses are to be repeated at several scales, indicate several columns
+	
 	period.1m=c(1950,1969),  # lower and upper limit of pre.period 
+	
 	period.2m=c(1970,1989),  # lower and upper limit of post.period
- 	output.file="C:/R/RichnessChange_per_cell.txt",  #path and name of the file that will be created
+ 	
+	output.file="C:/R/RichnessChange_per_cell.txt",  #path and name of the file that will be created
+	
 	min.recs=c(20),   #  minimum number of records per gridcell/period 
+	
 	MIN.PROP=0.2,      #proportion of the max number of sps per cell that will be used as minimum number of records
+	
 	FIXGRID=F,   # specifies if the data included in the analyses should only come from cells selected in smallest scale analyses or not 
+	
 	DIF=10)  # specifies the maximum diference between rec number in pre and pos. Ratio maxRecords/minRecords < DIF
                 
  
