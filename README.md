@@ -1,5 +1,5 @@
 # richness.change
-scripts to estimate richness change  based on historical data
+# scripts to estimate richness change  based on historical data
 
 
 Estimates of species richness change based on historical records require a methodology that corrects for the effects of sampling effort (e.g. number of records per grid cell and time period), as well as bias associated with collectors (e.g. preference for rare species, under-representation of singletons due to efforts to capture differences due to sexual dimorphism). The scripts ‘Multilevel.RAR_EXTR’ and  ‘Trend.extractor’ allow to deal with such particularities of historical datasets when estimating richness changes. See example in the end of this file.
@@ -10,7 +10,7 @@ For datasets where richness change estimates are done for multiple geographical 
 
 If you have multiple geographical locations with variable data quality, it is advisable to set a priori  selection criteria. As an example, in Carvalheiro et al (2013) we only estimated richness change for cells that: (1) had more than 15 records per time period, (2) the ratio of records/number of species was higher than 1.5 in each of the two compared time periods, and (3) if number of records was less than five-fold the total number of species in the country, we only considered cells with less than a 10-fold difference in numbers of records between periods. Applying less strict selection criteria would have led to the selection of more geographical locations, but also to results that are highly influenced by individual cells. 
 
-References
+# References
 
 Carvalheiro L.G., et al. 2013. Species richness declines and biotic homogenization have slowed down for NW-European pollinators and plants. Ecology Letters, 16, 870-878. 
 
@@ -28,27 +28,16 @@ Viechtbauer, W. (2010). Conducting meta-analyses in R with the metafor package. 
 # 3.   Run MultilevelRAR function
 
 	multilevel.RAR.buster (multi.RAR.data=Data, #inform name of original dataset
-	
 	taxon.indx=7,   # column nb with info on species name
-	
 	trait.indx=16,  # column nb that has info on traits, if no trait analyses will be done the column should cointain the same value throughout
-	
 	year.indx=3,    # column nb with info on year
-	
 	scale.data.indcs=c(1,12), # columns with information on cell ID. If analyses are to be repeated at several scales, indicate several columns
-	
 	period.1m=c(1950,1969),  # lower and upper limit of pre.period 
-	
 	period.2m=c(1970,1989),  # lower and upper limit of post.period
- 	
 	output.file="C:/R/RichnessChange_per_cell.txt",  #path and name of the file that will be created
-	
 	min.recs=c(20),   #  minimum number of records per gridcell/period 
-	
 	MIN.PROP=0.2,      #proportion of the max number of sps per cell that will be used as minimum number of records
-	
 	FIXGRID=F,   # specifies if the data included in the analyses should only come from cells selected in smallest scale analyses or not 
-	
 	DIF=10)  # specifies the maximum diference between rec number in pre and pos. Ratio maxRecords/minRecords < DIF
                 
  
