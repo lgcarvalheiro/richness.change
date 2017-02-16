@@ -25,8 +25,8 @@ Viechtbauer, W. (2010). Conducting meta-analyses in R with the metafor package. 
  1. copy paste all Multilevel.RAR_EXTR and Trend.extractor functions into R
  2. upload data
 
- 3.   Run MultilevelRAR function
-#
+# 3.   Run MultilevelRAR function
+
 	multilevel.RAR.buster (multi.RAR.data=Data, #inform name of original dataset
 	taxon.indx=7,   # column nb with info on species name
 	trait.indx=16,  # column nb that has info on traits, if no trait analyses will be done the column should cointain the same value throughout
