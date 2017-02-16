@@ -1,6 +1,7 @@
 # richness.change
  scripts to estimate richness change  based on historical data
- Luísa G. Carvalheiro
+
+Luísa G. Carvalheiro
 
 
 Estimates of species richness change based on historical records require a methodology that corrects for the effects of sampling effort (e.g. number of records per grid cell and time period), as well as bias associated with collectors (e.g. preference for rare species, under-representation of singletons due to efforts to capture differences due to sexual dimorphism). The scripts ‘Multilevel.RAR_EXTR’ and  ‘Trend.extractor’ allow to deal with such particularities of historical datasets when estimating richness changes. See example in the end of this file.
