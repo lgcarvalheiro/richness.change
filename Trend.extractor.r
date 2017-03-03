@@ -9,7 +9,7 @@
 ###  were indeed corrected and/or to extract average trends for estimates of species richness change calculated based on Multilevel.RAR_EXTR script 
 ###  please use Trend.extractor script
 ###  based on list of records of species presences
-###  Responsible: Luísa G. Carvalheiro (Naturalis Biodiversity Center/Univeristy of Brasília), lgcarvalheiro@gmail.com
+###  Responsible: LuÃ­sa G. Carvalheiro (Naturalis Biodiversity Center/Univeristy of BrasÃ­lia), lgcarvalheiro@gmail.com
 ###  Date: 1 September 2013
 ###########################################################################################
 
@@ -22,7 +22,7 @@ library(metafor)
 # ---------------------------------------------------------------------------------------------------------------------------------
 ztest<-function(mean,sd) 2* pnorm(-abs(mean/sd))  # z test= (score-mean)/sd ## 2 * pnorm(- abs(z))   for the two-tailed P-value.
 # function to test if richness change is significantly different from zero
-----------------------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
 bootstrap.weighted <- function(boot.vector, wghts, repeats=10000){
@@ -527,8 +527,8 @@ if(nrow(TEST.TABLE)>PhC_threshold){     # here I indicate the minimum number of 
 
  
 mmvar<-rma.uni(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,mods=log(TEST.TABLE$Ratio),method="ML",control=list(threshold=rmaTHR)) 
-#yi	-vector of length k with the observed effect sizes or outcomes. See ‘Details’.
-#vi	- vector of length k with the corresponding sampling variances. See ‘Details’.
+#yi	-vector of length k with the observed effect sizes or outcomes. See Â‘DetailsÂ’.
+#vi	- vector of length k with the corresponding sampling variances. See Â‘DetailsÂ’.
  # tau^2 is estimated automatically, and it provides a measure of total amount of heterogeneity                 
 
 
@@ -567,8 +567,8 @@ mmvar<-rma.uni(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,method="ML",c
 
 } }else {  
 mmvar<-rma.uni(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,method="ML",control=list(threshold=rmaTHR)) 
-#yi	-vector of length k with the observed effect sizes or outcomes. See ‘Details’.
-#vi	- vector of length k with the corresponding sampling variances. See ‘Details’.
+#yi	-vector of length k with the observed effect sizes or outcomes. See Â‘DetailsÂ’.
+#vi	- vector of length k with the corresponding sampling variances. See Â‘DetailsÂ’.
 
 CorrectedSD=(SElogratio) 
   CorrectedSD_notboot=  SElogratio_notBoot
@@ -809,8 +809,8 @@ m="weightedReg"
 
 
 mmvar<-rma.uni(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,mods=log(TEST.TABLE$Ratio),method="ML",control=list(threshold=rmaTHR)) 
-#yi	-vector of length k with the observed effect sizes or outcomes. See ‘Details’.
-#vi	- vector of length k with the corresponding sampling variances. See ‘Details’.
+#yi	-vector of length k with the observed effect sizes or outcomes. See Â‘DetailsÂ’.
+#vi	- vector of length k with the corresponding sampling variances. See Â‘DetailsÂ’.
 
 SEFFPvalue=mmvar$pval[2]
 SEFFZtest=mmvar$zval[2]
@@ -844,8 +844,8 @@ mmvar<-rma.uni(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,method="ML",c
 
 } }else {  
 mmvar<-rma(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,method="ML",control=list(threshold=rmaTHR)) 
-#yi	-vector of length k with the observed effect sizes or outcomes. See ‘Details’.
-#vi	- vector of length k with the corresponding sampling variances. See ‘Details’.
+#yi	-vector of length k with the observed effect sizes or outcomes. See Â‘DetailsÂ’.
+#vi	- vector of length k with the corresponding sampling variances. See Â‘DetailsÂ’.
 
 CorrectedSD=(SElogratio) 
   CorrectedSD_notboot=  SElogratio_notBoot
@@ -1108,8 +1108,8 @@ TEST.TABLE$Ratio=with(TEST.TABLE, (post.rec/pre.rec))
 
 
 mmvar<-rma.uni(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,mods=log(TEST.TABLE$Ratio),method="ML",control=list(threshold=rmaTHR)) 
-#yi	-vector of length k with the observed effect sizes or outcomes. See ‘Details’.
-#vi	- vector of length k with the corresponding sampling variances. See ‘Details’.
+#yi	-vector of length k with the observed effect sizes or outcomes. See Â‘DetailsÂ’.
+#vi	- vector of length k with the corresponding sampling variances. See Â‘DetailsÂ’.
 
 SEFFPvalue=mmvar$pval[2]
 SEFFZtest=mmvar$zval[2]
@@ -1142,8 +1142,8 @@ mmvar<-rma.uni(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,method="ML",c
 
 } }else {  
 mmvar<-rma(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,method="ML",control=list(threshold=rmaTHR)) 
-#yi	-vector of length k with the observed effect sizes or outcomes. See ‘Details’.
-#vi	- vector of length k with the corresponding sampling variances. See ‘Details’.
+#yi	-vector of length k with the observed effect sizes or outcomes. See Â‘DetailsÂ’.
+#vi	- vector of length k with the corresponding sampling variances. See Â‘DetailsÂ’.
 
 CorrectedSD=(SElogratio) 
   CorrectedSD_notboot=  SElogratio_notBoot
