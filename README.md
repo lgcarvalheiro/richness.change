@@ -9,16 +9,25 @@ Estimates of species richness change based on historical records require a metho
 
 ----------------------------------------------------------------------------------------------------------
 Description of the main columns of the output table of ‘Multilevel.RAR_EXTR’ :
-min.rec	
+
 spat.scale - id of spatial scale at which calculations were done, as indicated by the user (e.g. '10x10km cell', 'county', 'state')	
+
 cell- id of the spatial location at which calculations were done, as indicated by the user (e.g. 'TQ28', 'Sao Paulo state')	
+
 trait.g - id of the trait group for which the calculations were done, as indicated by the user (e.g. 'oligolectic', 'monolectic')
+
 pre.rec- original sampling efforts in the pre-period 
+
 post.rec - original sampling efforts in the post periods	
+
 pre.tau.mean_extr_3x - measures of estimated richness in pre time period when using combination of extrapolation and interpolation 
+
 post.tau.mean_extr_3x - measures of estimated richness in post time period when using combination of extrapolation and interpolation
+
 Change.Mao_extr_3x - relative richness change estimate when using combination of extrapolation and interpolation
+
 Change.Mao_extr_3x_CIlow - 95% confidence interval (lowest limit) of relative richness change estimate when using combination of extrapolation and interpolation
+
 Change.Mao_extr_3x_CIup - 95% confidence interval (lowest limit) of relative richness change estimate when using combination of extrapolation and interpolation
 
 ---------------------------------------------------------------------------------------------------------
