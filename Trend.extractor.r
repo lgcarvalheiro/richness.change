@@ -520,15 +520,15 @@ TEST.TABLE$Ratio=with(TEST.TABLE, (post.rec/pre.rec))
 
 
 
-m ="weightedReg"  # previous version of the codes had other options but know the code only applied weighted regression          
+m ="weightedReg"           
 
  
-if(nrow(TEST.TABLE)>PhC_threshold){     # here I indicate the minimum number of cells needed to apply the regression
+if(nrow(TEST.TABLE)>PhC_threshold){     # here it is indicated the minimum number of cells needed to apply the regression
 
  
 mmvar<-rma.uni(yi=TEST.TABLEchangeRATlog,vi=1/TEST.TABLE$WEIvector,mods=log(TEST.TABLE$Ratio),method="ML",control=list(threshold=rmaTHR)) 
-#yi	-vector of length k with the observed effect sizes or outcomes. See Details.
-#vi	- vector of length k with the corresponding sampling variances. See Details.
+#yi	-vector of length k with the observed effect sizes or outcomes. 
+#vi	- vector of length k with the corresponding sampling variances. 
  # tau^2 is estimated automatically, and it provides a measure of total amount of heterogeneity                 
 
 
@@ -941,9 +941,8 @@ bootfun<-function(d,i){d2<-d[i,];sum(d2$m*d2$w)/sum(d2$w)}     # function of Tom
 if( nrow(dados)>2000){bootobj<-boot(dados,bootfun,R=nrow(dados))}else {bootobj<-boot(dados,bootfun,R=2000)}    # R indicates the number of resamples
 Weighted_Corrected_est=bootobj$t0
 
-# these 5 lines account for the fact that if std. error of bootobj is Zero 
-#(e.g. only noticed from small scale when nb cells is 2 and very similar,  
-#all generated values are equal and boot.ci function doesn't work  
+# these lines account for the fact that if std. error of bootobj is Zero 
+#all generated values are equal and boot.ci function doesn't work    
 if(length(unique(bootobj$t))==1){            
 Weighted_Corrected_95CIup=Weighted_Corrected_est
 Weighted_Corrected_95CIlow=Weighted_Corrected_est
@@ -1223,8 +1222,7 @@ bootfun<-function(d,i){d2<-d[i,];sum(d2$m*d2$w)/sum(d2$w)}
 if( nrow(dados)>2000){bootobj<-boot(dados,bootfun,R=nrow(dados))}else {bootobj<-boot(dados,bootfun,R=2000)}
 Weighted_Corrected_est=bootobj$t0
 
-# these 5 lines account for the fact that if std. error of bootobj is Zero 
-#(e.g. only noticed from small scale when nb cells is 2 and very similar,  
+# these lines account for the fact that if std. error of bootobj is Zero 
 #all generated values are equal and boot.ci function doesn't work  
 if(length(unique(bootobj$t))==1){         
 Weighted_Corrected_95CIup=Weighted_Corrected_est
