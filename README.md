@@ -39,6 +39,8 @@ This analyses also allowed to obtain an overall weighted value of richness chang
 
 If you have multiple geographical locations with variable data quality, it is advisable to set a priori  selection criteria. As an example, in Carvalheiro et al (2013) we only estimated richness change for cells that: (1) had more than 15 records per time period, (2) the ratio of records/number of species was higher than 1.5 in each of the two compared time periods, and (3) if number of records was less than five-fold the total number of species in the country, we only considered cells with less than a 10-fold difference in numbers of records between periods. Applying less strict selection criteria would have led to the selection of more geographical locations, but also to results that are highly influenced by individual cells. 
 
+Please note that the 95% confidence interval represented in Fig 1 of Carvalheiro et al (2013) was calculated based on standard deviation of the log ratio obtained when using the package metafor (In the tables produced by Trend.extractor the column used was ‘Estimated_logRatio_SE’), and after the values (logratio and 95CI) were back-transformed. 
+
 # References
 
 Carvalheiro L.G., et al. 2013. Species richness declines and biotic homogenization have slowed down for NW-European pollinators and plants. Ecology Letters, 16, 870-878. 
