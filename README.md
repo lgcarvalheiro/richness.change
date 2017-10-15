@@ -81,7 +81,7 @@ Viechtbauer, W. (2010). Conducting meta-analyses in R with the metafor package. 
 	Trend(Data= multilevel.RAR.DATA,   
 	weight.SE=T,  
 	Min.PROP=0.2, #proportion of the max number of sps per cell that will be used as minimum number of reocrds
-	Min.REC=15,  # minimum number of records within a cell required
+	Min.REC=15,  # minimum number of records within a cell required for each time period
 	Min.SPS=2, # minimum number of species within a cell required   for a cell to be selected
 	RATIO=1.5, # specifies the minimum value of the ratio between nb.records/nb.species  required for a cell to be selected
 	DIF=10,   # specifies the maximum diference between rec number in pre and pos. Ratio maxRecords/minRecords < DIF
