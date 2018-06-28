@@ -74,7 +74,7 @@ bootstrap.weighted <- function(boot.vector, wghts, repeats=10000){
 
 trend.extractor <- function(Data,
                             weight.SE, Min.PROP,Min.REC, Min.SPS, RATIO, DIF, TOL,output.file,
-                            corrected.file="corrected_file.txt",TEST=T,CORRECTED.FILE=F,LM=F,
+                            corrected.file="corrected_file.txt",TEST=T,CORRECTED.FILE=T, 
                             Resampling_Bias_correction=T, PhC_threshold=6,rmaTHR=10^-5,Pseff=0.06 ){
 
 # Arguments:
