@@ -60,6 +60,7 @@ PValue_cell - this column indicates the p-value of the z-test used to check if t
 PERC - percentual change, Change(%)=(exp(logratio)-1)x 100
 weight - this column identifies the weight (no weight, inverse of variance or bootsrapped inverse of the variance). In Carvalheiro et al. 2013 we opted for BootVar.inv (Bootstrapped inverse of variance)
 
+-------------------------------------------------------------------
 ##2 - table with the weighted average change values for each spatial scale
 
 *Main columns are:*
